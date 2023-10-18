@@ -1,0 +1,156 @@
+body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+h2 {
+    color: white;
+}
+h4 {
+    color: white;
+}
+
+.circle {
+    position: relative;
+    border: 5px solid white;
+    border-radius: 50%;
+    height: 15rem;
+    width: 15rem; /* Adjusted width to make the circle more circular */
+    display: flex;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+}
+
+.circle-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 40px;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+}
+.container {
+    margin: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+.image-container {
+    position: relative;
+    left: 3.5rem;
+}
+
+.intro-container {
+    position: relative;
+    top: 30rem;
+    align-self: center;
+    text-align: center; /* Center the intro text and button on mobile */
+}
+
+#my-image {
+    position: absolute;
+    left: 1rem;
+    width: 23rem;
+    height: 23rem;
+    z-index: 2;
+}
+
+#grey {
+    position: absolute;
+    top: 6rem;
+    left: 1.5rem;
+    z-index: 1;
+    width: 22rem;
+    height: 17rem;
+    transform: rotate(3000deg);
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+.card-container>div{
+    margin: 1rem;
+    height: 15rem;
+    width: 15rem;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    font-weight: bold;
+    color: cadetblue;
+    margin-bottom: 1.2rem;
+}
+#intro-text {
+    color: aliceblue;
+}
+.contact-me {
+    background-color: #949494;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.links-contact {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.links-contact h5 {
+    display: flex;
+    align-items: center;
+}
+
+h5 svg {
+    margin-right: 5px; /* Adjust the margin as needed */
+}
+@media (min-width: 1000px) {
+    .container {
+        display: grid;
+        /* Set width to 100% to cover the whole width of the page */
+        grid-template-rows: 5rem 1fr auto; /* 1fr for a flexible middle row */
+        grid-template-columns: 50rem 1fr; /* 1fr for a flexible right column */
+    }
+    .menu-bar{
+        grid-row-start: 0;
+        grid-column-start: 0;
+        grid-column: span 2;
+    }
+    .image-container{
+        grid-row-start: 2;
+        grid-column-start: 1;
+        position: relative;
+    }
+    .intro-container{
+        top: 0px;
+        width: 25rem;
+        height: 20rem;
+        grid-row-start: 2;
+        grid-column-start: 2;
+    }
+    .circle-container {
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .card-container{
+        gap: 1rem;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
